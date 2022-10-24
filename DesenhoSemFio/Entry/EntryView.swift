@@ -30,7 +30,7 @@ struct EntryView: View {
                     
                     Button(action: {
                         self.isShowingNextStep = true
-                        
+                        viewModel.createRoom()
                     }, label: {
                         Text("Criar sala")
                         

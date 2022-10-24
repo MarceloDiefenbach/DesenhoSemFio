@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		355191491179979A36A1264E /* Pods_DesenhoSemFio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C169EB640CB75F55209DFF0 /* Pods_DesenhoSemFio.framework */; };
 		DF69943428FD787700FF1C61 /* DesenhoSemFioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69943328FD787700FF1C61 /* DesenhoSemFioApp.swift */; };
 		DF69943628FD787700FF1C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69943528FD787700FF1C61 /* ContentView.swift */; };
 		DF69943828FD787900FF1C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF69943728FD787900FF1C61 /* Assets.xcassets */; };
@@ -17,9 +18,12 @@
 		DF69944928FDB70F00FF1C61 /* CanvasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69944828FDB70F00FF1C61 /* CanvasViewModel.swift */; };
 		DFFFE431290614CA0088AE22 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFFE430290614CA0088AE22 /* EntryView.swift */; };
 		DFFFE433290614D10088AE22 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFFE432290614D10088AE22 /* EntryViewModel.swift */; };
+		DFFFE435290619160088AE22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFFFE434290619160088AE22 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C169EB640CB75F55209DFF0 /* Pods_DesenhoSemFio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesenhoSemFio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEFE33918C86EA77A745C288 /* Pods-DesenhoSemFio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesenhoSemFio.release.xcconfig"; path = "Target Support Files/Pods-DesenhoSemFio/Pods-DesenhoSemFio.release.xcconfig"; sourceTree = "<group>"; };
 		DF69943028FD787700FF1C61 /* DesenhoSemFio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesenhoSemFio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF69943328FD787700FF1C61 /* DesenhoSemFioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesenhoSemFioApp.swift; sourceTree = "<group>"; };
 		DF69943528FD787700FF1C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +35,8 @@
 		DF69944828FDB70F00FF1C61 /* CanvasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewModel.swift; sourceTree = "<group>"; };
 		DFFFE430290614CA0088AE22 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		DFFFE432290614D10088AE22 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
+		DFFFE434290619160088AE22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ECB1165126EA5D5AA6A05D84 /* Pods-DesenhoSemFio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesenhoSemFio.debug.xcconfig"; path = "Target Support Files/Pods-DesenhoSemFio/Pods-DesenhoSemFio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +44,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355191491179979A36A1264E /* Pods_DesenhoSemFio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90510E8B62A8E05F66858DF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECB1165126EA5D5AA6A05D84 /* Pods-DesenhoSemFio.debug.xcconfig */,
+				AEFE33918C86EA77A745C288 /* Pods-DesenhoSemFio.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CD0A8E8AE97FC81AFE1F75F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C169EB640CB75F55209DFF0 /* Pods_DesenhoSemFio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DF69942728FD787700FF1C61 = {
 			isa = PBXGroup;
 			children = (
 				DF69943228FD787700FF1C61 /* DesenhoSemFio */,
 				DF69943128FD787700FF1C61 /* Products */,
+				90510E8B62A8E05F66858DF2 /* Pods */,
+				CD0A8E8AE97FC81AFE1F75F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +90,7 @@
 		DF69943228FD787700FF1C61 /* DesenhoSemFio */ = {
 			isa = PBXGroup;
 			children = (
+				DFFFE434290619160088AE22 /* GoogleService-Info.plist */,
 				DFFFE42F290614C10088AE22 /* Entry */,
 				DF69944728FDB70400FF1C61 /* Canvas */,
 				DF69943328FD787700FF1C61 /* DesenhoSemFioApp.swift */,
@@ -108,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF69943E28FD787900FF1C61 /* Build configuration list for PBXNativeTarget "DesenhoSemFio" */;
 			buildPhases = (
+				24F5CE706E6F2B4D6872A72F /* [CP] Check Pods Manifest.lock */,
 				DF69942C28FD787700FF1C61 /* Sources */,
 				DF69942D28FD787700FF1C61 /* Frameworks */,
 				DF69942E28FD787700FF1C61 /* Resources */,
+				585B6311A5CA770B541AD4BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,10 +191,53 @@
 			files = (
 				DF69943B28FD787900FF1C61 /* Preview Assets.xcassets in Resources */,
 				DF69943828FD787900FF1C61 /* Assets.xcassets in Resources */,
+				DFFFE435290619160088AE22 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24F5CE706E6F2B4D6872A72F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesenhoSemFio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		585B6311A5CA770B541AD4BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesenhoSemFio/Pods-DesenhoSemFio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesenhoSemFio/Pods-DesenhoSemFio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesenhoSemFio/Pods-DesenhoSemFio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF69942C28FD787700FF1C61 /* Sources */ = {
@@ -301,6 +374,7 @@
 		};
 		DF69943F28FD787900FF1C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECB1165126EA5D5AA6A05D84 /* Pods-DesenhoSemFio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -331,6 +405,7 @@
 		};
 		DF69944028FD787900FF1C61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEFE33918C86EA77A745C288 /* Pods-DesenhoSemFio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
