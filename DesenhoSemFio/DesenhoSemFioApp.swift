@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct DesenhoSemFioApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EntryView()
         }
     }
 }

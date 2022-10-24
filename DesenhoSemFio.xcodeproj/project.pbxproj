@@ -11,6 +11,12 @@
 		DF69943628FD787700FF1C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69943528FD787700FF1C61 /* ContentView.swift */; };
 		DF69943828FD787900FF1C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF69943728FD787900FF1C61 /* Assets.xcassets */; };
 		DF69943B28FD787900FF1C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF69943A28FD787900FF1C61 /* Preview Assets.xcassets */; };
+		DF69944228FD7C7F00FF1C61 /* ImageFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69944128FD7C7F00FF1C61 /* ImageFunctions.swift */; };
+		DF69944428FD814C00FF1C61 /* Write.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69944328FD814C00FF1C61 /* Write.swift */; };
+		DF69944628FDB6DA00FF1C61 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69944528FDB6DA00FF1C61 /* CanvasView.swift */; };
+		DF69944928FDB70F00FF1C61 /* CanvasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69944828FDB70F00FF1C61 /* CanvasViewModel.swift */; };
+		DFFFE431290614CA0088AE22 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFFE430290614CA0088AE22 /* EntryView.swift */; };
+		DFFFE433290614D10088AE22 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFFE432290614D10088AE22 /* EntryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		DF69943528FD787700FF1C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF69943728FD787900FF1C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF69943A28FD787900FF1C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF69944128FD7C7F00FF1C61 /* ImageFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFunctions.swift; sourceTree = "<group>"; };
+		DF69944328FD814C00FF1C61 /* Write.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Write.swift; sourceTree = "<group>"; };
+		DF69944528FDB6DA00FF1C61 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		DF69944828FDB70F00FF1C61 /* CanvasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewModel.swift; sourceTree = "<group>"; };
+		DFFFE430290614CA0088AE22 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		DFFFE432290614D10088AE22 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +63,14 @@
 		DF69943228FD787700FF1C61 /* DesenhoSemFio */ = {
 			isa = PBXGroup;
 			children = (
+				DFFFE42F290614C10088AE22 /* Entry */,
+				DF69944728FDB70400FF1C61 /* Canvas */,
 				DF69943328FD787700FF1C61 /* DesenhoSemFioApp.swift */,
 				DF69943528FD787700FF1C61 /* ContentView.swift */,
 				DF69943728FD787900FF1C61 /* Assets.xcassets */,
 				DF69943928FD787900FF1C61 /* Preview Content */,
+				DF69944128FD7C7F00FF1C61 /* ImageFunctions.swift */,
+				DF69944328FD814C00FF1C61 /* Write.swift */,
 			);
 			path = DesenhoSemFio;
 			sourceTree = "<group>";
@@ -65,6 +81,24 @@
 				DF69943A28FD787900FF1C61 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF69944728FDB70400FF1C61 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				DF69944528FDB6DA00FF1C61 /* CanvasView.swift */,
+				DF69944828FDB70F00FF1C61 /* CanvasViewModel.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		DFFFE42F290614C10088AE22 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				DFFFE430290614CA0088AE22 /* EntryView.swift */,
+				DFFFE432290614D10088AE22 /* EntryViewModel.swift */,
+			);
+			path = Entry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF69944228FD7C7F00FF1C61 /* ImageFunctions.swift in Sources */,
+				DF69944428FD814C00FF1C61 /* Write.swift in Sources */,
+				DF69944928FDB70F00FF1C61 /* CanvasViewModel.swift in Sources */,
+				DF69944628FDB6DA00FF1C61 /* CanvasView.swift in Sources */,
+				DFFFE431290614CA0088AE22 /* EntryView.swift in Sources */,
+				DFFFE433290614D10088AE22 /* EntryViewModel.swift in Sources */,
 				DF69943628FD787700FF1C61 /* ContentView.swift in Sources */,
 				DF69943428FD787700FF1C61 /* DesenhoSemFioApp.swift in Sources */,
 			);
@@ -270,6 +310,7 @@
 				DEVELOPMENT_TEAM = 6525BU9D84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save imagem on device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +340,7 @@
 				DEVELOPMENT_TEAM = 6525BU9D84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save imagem on device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

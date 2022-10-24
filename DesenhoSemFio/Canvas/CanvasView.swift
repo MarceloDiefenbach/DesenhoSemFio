@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CanvasView.swift
 //  DesenhoSemFio
 //
 //  Created by Marcelo Diefenbach on 17/10/22.
@@ -7,23 +7,17 @@
 
 import SwiftUI
 
-struct Line {
-    var points = [CGPoint]()
-    var color: Color = .black
-    var lineWidth: Double = 5.0
-}
-
-struct ContentView: View {
+struct CanvasView: View {
     
-    @State private var currentLine = Line()
-    @State private var lines: [Line] = []
+    @StateObject var viewModel: CanvasViewModel = CanvasViewModel()
+    
     @State private var image: UIImage?
     @State private var isShowingNextStep: Bool = false
     
-    var canvas: some View {
+    var CanvasView: some View {
         Canvas { contex, size in
             
-            for line in lines {
+            for line in viewModel.lines {
                 var path = Path()
                 path.addLines(line.points)
                 contex.stroke(path, with: .color(line.color), lineWidth: line.lineWidth)
@@ -31,58 +25,63 @@ struct ContentView: View {
             
         }.gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
             .onChanged({value in
-                let newPoint = value.location
-                currentLine.points.append(newPoint)
-                self.lines.append(currentLine)
+                viewModel.addLine(value: value)
             })
-                .onEnded({ value in
-                    self.currentLine = Line(points: [])
-                })
+            .onEnded({ value in
+                viewModel.cleanLineToRestart()
+            })
         ).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
     
     var body: some View {
-        
         NavigationView {
             ZStack {
-                canvas
+                CanvasView
                 VStack {
                     HStack {
                         Spacer()
                         Button(action: {
-                            self.lines.removeAll()
+                            self.viewModel.cleanCanvas()
+                            
                         }, label: {
                             Image(systemName: "xmark.circle.fill").foregroundColor(.black)
                                 .font(.system(size: 30))
+                            
                         })
                     }
                     Spacer()
-                }.padding(.all, 20)
+                    
+                }.padding(.top, UIScreen.main.bounds.height*0.05)
+                    .padding(.trailing, 20)
+                
                 VStack {
-                    Text("Desenhe:")
+                    Text(viewModel.drawThis)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.black)
                         .font(.system(size: 16))
                     
-                    Text("Garfo")
+                    Text(viewModel.thingToDraw)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.black)
                         .font(.system(size: 40))
                     
                     Spacer ()
                     Button(action: {
-                        self.image = canvas.snapshot()
+                        self.image = CanvasView.snapshot()
                         save(image: self.image!)
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                            self.isShowingNextStep = true
-                        })
+                        self.isShowingNextStep = true
+                        
                     }, label: {
-                        Text("Pronto!")
+                        Text(viewModel.finishButtonLabel)
+                        
                     }).buttonStyle(.borderedProminent)
+                    
                 }.padding(.vertical, UIScreen.main.bounds.height*0.05)
+                
             }.navigationBarHidden(true)
                 .fullScreenCover(isPresented: $isShowingNextStep) {
                     Write(image: self.$image)
+                    
                 }
         }
     }
@@ -90,10 +89,11 @@ struct ContentView: View {
     func save(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
+    
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CanvasView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CanvasView(viewModel: CanvasViewModel())
     }
 }
